@@ -1,3 +1,7 @@
+/**
+ * @author xixy10@foxmail.com
+ * @version V0.1 2017年7月18日 上午10:19:35
+ */
 package com.pku.LawKG.model;
 
 import java.util.ArrayList;
@@ -12,13 +16,14 @@ import com.pku.LawKG.Exception.IllegalExtendException;
 
 public class Condition extends Node {
 
-	private Map<Property, SPONode> childs=new HashMap<Property,SPONode>();
+	private Map<Property, SPONode> childs = new HashMap<Property, SPONode>();
 
 	public Map<Property, SPONode> getChilds() {
 		return childs;
 	}
 
 	public static List<Property> legalProperty = new ArrayList<Property>();
+
 	static {
 		legalProperty.add(RDF.subject);
 		legalProperty.add(RDF.object);
